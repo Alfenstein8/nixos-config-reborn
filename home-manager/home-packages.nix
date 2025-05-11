@@ -1,19 +1,22 @@
-{ pkgs, ... }: {
+{ pkgs, ... }: 
+let
+  # Create a customized version of logseq
+  logseq-patch = pkgs.logseq.override {
+    electron_27 = pkgs.electron_34;
+  };
+in
+{
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    # Packages in each category are sorted alphabetically
-
     # Desktop apps
     anki
-    code-cursor
     imv
     mpv
     obs-studio
     obsidian
     pavucontrol
     teams-for-linux
-    telegram-desktop
     vesktop
     bitwarden
     firefox
@@ -21,6 +24,8 @@
     element-desktop
     beeper
     thunderbird
+    logseq-patch
+    # nextcloud-client
 
     # CLI utils
     bc
@@ -33,6 +38,7 @@
     git-graph
     grimblast
     htop
+    btop
     hyprpicker
     ntfs3g
     mediainfo

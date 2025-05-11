@@ -18,6 +18,8 @@
     bitwarden
     firefox
     steam
+    element-desktop
+    beeper
 
     # CLI utils
     bc

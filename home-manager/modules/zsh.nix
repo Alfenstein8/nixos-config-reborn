@@ -13,7 +13,7 @@
         upd = "nh os switch --update";
         hms = "nh home switch";
 
-        pkgs = "nvim ${flakeDir}/nixos/packages.nix";
+        pkgs = "nvim ${flakeDir}/home-manager/home-packages.nix";
 
         r = "ranger";
         v = "nvim";
@@ -24,6 +24,7 @@
         ga = "git add";
         gc = "git commit";
         gp = "git push";
+	lg = "lazygit";
 
         ".." = "cd ..";
       };

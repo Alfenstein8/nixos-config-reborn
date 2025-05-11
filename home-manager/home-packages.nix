@@ -15,6 +15,8 @@
     teams-for-linux
     telegram-desktop
     vesktop
+    bitwarden
+    firefox
 
     # CLI utils
     bc

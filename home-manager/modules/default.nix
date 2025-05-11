@@ -1,6 +1,5 @@
 {
   imports = [
-    ./steam.nix
     ./alacritty.nix
     ./bat.nix
     ./chromium.nix

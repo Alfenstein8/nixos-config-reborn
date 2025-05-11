@@ -15,6 +15,5 @@
     ./user.nix
     ./zram.nix
     ./steam.nix
-    ./nixvim.nix
   ];
 }

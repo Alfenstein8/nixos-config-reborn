@@ -20,6 +20,7 @@
     steam
     element-desktop
     beeper
+    thunderbird
 
     # CLI utils
     bc

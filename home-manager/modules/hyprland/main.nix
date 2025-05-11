@@ -60,8 +60,8 @@
       };
 
       input = {
-        kb_layout = "us,ru,il";
-        kb_options = "grp:caps_toggle";
+	kb_layout = "dk, us";
+        # kb_options = "grp:caps_toggle";
       };
 
       gestures = {

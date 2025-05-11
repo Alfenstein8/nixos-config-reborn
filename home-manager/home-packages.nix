@@ -17,7 +17,6 @@
     vesktop
     bitwarden
     firefox
-    steam
 
     # CLI utils
     bc

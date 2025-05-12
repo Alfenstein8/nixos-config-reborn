@@ -20,13 +20,16 @@ in
     vesktop
     bitwarden
     firefox
-    steam
     element-desktop
     beeper
     thunderbird
     logseq-patch
     # nextcloud-client
     inputs.zen-browser.packages.${pkgs.system}.beta
+
+    # Gaming
+    steam
+    mangohud
 
     # CLI utils
     bc

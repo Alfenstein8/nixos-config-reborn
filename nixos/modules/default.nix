@@ -15,5 +15,6 @@
     ./user.nix
     ./zram.nix
     ./steam.nix
+    ./gamemode.nix
   ];
 }

@@ -29,7 +29,11 @@ in
 
     # Gaming
     steam
+    lutris
+    heroic
+    bottles
     mangohud
+    protonup
 
     # CLI utils
     bc

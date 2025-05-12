@@ -15,6 +15,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
     # COMING SOON...
     #nixvim = {
     #  url = "github:nix-community/nixvim";
@@ -22,7 +23,7 @@
     #};
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, zen-browser, ... }@inputs: let
     system = "x86_64-linux";
     homeStateVersion = "24.11";
     user = "alfred";

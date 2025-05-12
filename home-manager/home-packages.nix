@@ -1,4 +1,4 @@
-{ pkgs, ... }: 
+{ pkgs, inputs, ... }: 
 let
   # Create a customized version of logseq
   logseq-patch = pkgs.logseq.override {
@@ -26,6 +26,7 @@ in
     thunderbird
     logseq-patch
     # nextcloud-client
+    inputs.zen-browser.packages.${pkgs.system}.default
 
     # CLI utils
     bc

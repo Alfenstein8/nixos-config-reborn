@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: 
+{ pkgs, inputs, ... }:
 let
   # Create a customized version of logseq
   logseq-patch = pkgs.logseq.override {
@@ -26,6 +26,7 @@ in
     logseq-patch
     # nextcloud-client
     inputs.zen-browser.packages.${pkgs.system}.beta
+    filelight
 
     # Gaming
     steam
@@ -69,6 +70,15 @@ in
     openjdk23
     nodejs
     python311
+    pyenv
+    cargo
+    luarocks
+    yarn
+    yazi
+    lua
+    fd
+    gnumake
+    opam
 
     # WM stuff
     libsForQt5.xwaylandvideobridge

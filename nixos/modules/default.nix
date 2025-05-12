@@ -16,5 +16,6 @@
     ./zram.nix
     ./steam.nix
     ./gamemode.nix
+    ./waydroid.nix
   ];
 }

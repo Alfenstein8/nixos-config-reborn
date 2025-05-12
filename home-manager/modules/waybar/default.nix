@@ -44,7 +44,7 @@
 
         "custom/weather" = {
           format = " {} ";
-          exec = "curl -s 'wttr.in/Tashkent?format=%c%t'";
+          exec = "curl -s 'wttr.in/Copenhagen?format=%c%t'";
           interval = 300;
           class = "weather";
         };
@@ -82,8 +82,8 @@
         };
 
         "tray" = {
-          icon-size = 14;
-          spacing = 1;
+          icon-size = 18;
+          spacing = 4;
         };
       };
     };

@@ -71,6 +71,7 @@ in {
       zip
       tree
       dua
+      zoxide
 
       # Coding stuff
       openjdk23

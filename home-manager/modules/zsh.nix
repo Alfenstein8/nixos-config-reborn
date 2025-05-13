@@ -25,7 +25,10 @@
       gp = "git push";
       lg = "lazygit";
 
-      ".." = "cd ..";
+      ".." = "z ..";
+      cd = "z";
+
+      nix-shell = "nix-shell --command zsh";
     };
 
     history.size = 10000;
@@ -41,6 +44,7 @@
       if uwsm check may-start > /dev/null && uwsm select; then
         exec systemd-cat -t uwsm_start uwsm start default
       fi
+      eval "$(zoxide init zsh)"
     '';
   };
 }

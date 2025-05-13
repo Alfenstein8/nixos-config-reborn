@@ -1,11 +1,13 @@
-{ pkgs, inputs, ... }:
-let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   # Create a customized version of logseq
   logseq-patch = pkgs.logseq.override {
     electron_27 = pkgs.electron_34;
   };
-in
-{
+in {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
@@ -65,6 +67,7 @@ in
     wtype
     yt-dlp
     zip
+    tree
 
     # Coding stuff
     openjdk23
@@ -79,6 +82,10 @@ in
     fd
     gnumake
     opam
+
+    # Nix config
+    alejandra
+    nixd
 
     # WM stuff
     libsForQt5.xwaylandvideobridge

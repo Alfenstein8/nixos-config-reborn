@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   booksDir = "$HOME/Downloads/books";
   booksScript = pkgs.writeScriptBin "open_books" ''
     #!/bin/sh
@@ -15,7 +14,7 @@ let
     fi
   '';
 in {
-  home.packages = [ booksScript ];
+  home.packages = [booksScript];
 
   wayland.windowManager.hyprland.settings = {
     bind = [

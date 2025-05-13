@@ -1,33 +1,32 @@
-{ config, ... }: {
+{config, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    shellAliases =
-      let
-        flakeDir = "~/flake";
-      in {
-        sw = "nh os switch";
-        upd = "nh os switch --update";
-        hms = "nh home switch";
+    shellAliases = let
+      flakeDir = "~/flake";
+    in {
+      sw = "nh os switch";
+      upd = "nh os switch --update";
+      hms = "nh home switch";
 
-        pkgs = "nvim ${flakeDir}/home-manager/home-packages.nix";
+      pkgs = "nvim ${flakeDir}/home-manager/home-packages.nix";
 
-        r = "ranger";
-        v = "nvim";
-        se = "sudoedit";
-        microfetch = "microfetch && echo";
+      r = "ranger";
+      v = "nvim";
+      se = "sudoedit";
+      microfetch = "microfetch && echo";
 
-        gs = "git status";
-        ga = "git add";
-        gc = "git commit";
-        gp = "git push";
-	lg = "lazygit";
+      gs = "git status";
+      ga = "git add";
+      gc = "git commit";
+      gp = "git push";
+      lg = "lazygit";
 
-        ".." = "cd ..";
-      };
+      ".." = "cd ..";
+    };
 
     history.size = 10000;
     history.path = "${config.xdg.dataHome}/zsh/history";

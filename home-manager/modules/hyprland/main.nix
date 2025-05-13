@@ -60,14 +60,14 @@
       };
 
       input = {
-	kb_layout = "dk, us";
+        kb_layout = "dk, us";
         # kb_options = "grp:caps_toggle";
       };
 
       gestures = {
         workspace_swipe = true;
         workspace_swipe_invert = false;
-        workspace_swipe_forever	= true;
+        workspace_swipe_forever = true;
       };
 
       dwindle = {

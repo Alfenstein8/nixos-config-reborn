@@ -1,5 +1,4 @@
-{ pkgs, ... }: 
-let
+{pkgs, ...}: let
   # Fetch your Neovim config from GitHub
   myNvimConfig = builtins.fetchGit {
     url = "git@github.com:Alfenstein8/NormalNvim.git";
@@ -7,9 +6,7 @@ let
     # You can get the latest commit hash from your repo's commits page
     rev = "4170a2d20852fd5f625546e68fc057f84bef0c72"; # <--- IMPORTANT: Replace with your actual commit hash
   };
-
-in
-{
+in {
   programs.neovim = {
     enable = true;
   };

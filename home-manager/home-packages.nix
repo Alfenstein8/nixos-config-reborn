@@ -31,6 +31,7 @@ in {
       # nextcloud-client
       inputs.zen-browser.packages.${pkgs.system}.beta
       filelight
+      mullvad-vpn
 
       # Gaming
       steam
@@ -100,6 +101,8 @@ in {
       # Other
       bemoji
       nix-prefetch-scripts
+      iwd
+      networkmanagerapplet
     ]
     ++ [unstablePkgs.neovim];
 }

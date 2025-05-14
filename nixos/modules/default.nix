@@ -17,5 +17,6 @@
     ./steam.nix
     ./gamemode.nix
     ./waydroid.nix
+    ./keyring.nix
   ];
 }

@@ -73,7 +73,12 @@
       pkgs = nixpkgs.legacyPackages.${system};
       extraSpecialArgs = {
         inherit inputs homeStateVersion user;
-        unstablePkgs = nixpkgs-unstable.legacyPackages.${system};
+        unstablePkgs = import nixpkgs-unstable {
+          system = system;
+          config = {
+            allowUnfree = true;
+          };
+        };
       };
 
       modules = [

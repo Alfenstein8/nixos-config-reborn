@@ -28,10 +28,18 @@ in {
       beeper
       thunderbird
       logseq-patch
-      # nextcloud-client
       inputs.zen-browser.packages.${pkgs.system}.beta
       filelight
       mullvad-vpn
+      stremio
+
+      # kodi
+      (pkgs.kodi-wayland.withPackages (kodiPkgs:
+        with kodiPkgs; [
+          youtube
+          netflix
+          a4ksubtitles
+        ]))
 
       # Gaming
       steam
@@ -104,5 +112,9 @@ in {
       iwd
       networkmanagerapplet
     ]
-    ++ [unstablePkgs.neovim];
+    ++ (with unstablePkgs; [
+      neovim
+      tidal-hifi
+      nextcloud-client
+    ]);
 }

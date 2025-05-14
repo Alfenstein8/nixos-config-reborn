@@ -27,6 +27,7 @@
 
       ".." = "z ..";
       cd = "z";
+      ci = "zi";
 
       nix-shell = "nix-shell --command zsh";
     };

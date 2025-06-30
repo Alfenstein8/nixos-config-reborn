@@ -28,6 +28,8 @@
       mullvad-vpn
       stremio
       tidal-hifi
+      syncthing
+      syncthingtray
 
       # kodi
       (pkgs.kodi-wayland.withPackages (kodiPkgs:

@@ -1,6 +1,5 @@
 {
   pkgs,
-  unstablePkgs,
   inputs,
   ...
 }: let
@@ -33,6 +32,7 @@ in {
       filelight
       mullvad-vpn
       stremio
+      tidal-hifi
 
       # kodi
       (pkgs.kodi-wayland.withPackages (kodiPkgs:
@@ -85,6 +85,7 @@ in {
       tealdeer
       wireguard-tools
       tailscale
+      neovim
 
       # Coding stuff
       openjdk23
@@ -115,10 +116,6 @@ in {
       nix-prefetch-scripts
       iwd
       networkmanagerapplet
-    ]
-    ++ (with unstablePkgs; [
-      neovim
-      tidal-hifi
-      nextcloud-client
-    ]);
+
+    ];
 }

@@ -1,7 +1,15 @@
-{
+{inputs, system, ...}:{
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
+    # set the flake package
+    package = inputs.hyprland.packages.${system}.hyprland;
+    # make sure to also set the portal package, so that they are in sync
+    # portalPackage = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
+
+    plugins = [
+      # inputs.Hyprspace.packages.${system}.Hyprspace
+    ];
     settings = {
       env = [
         # Hint Electron apps to use Wayland

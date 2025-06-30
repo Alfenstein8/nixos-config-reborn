@@ -19,6 +19,5 @@
     ./zathura.nix
     ./zsh.nix
     # ./nixvim.nix
-    # ./zen.nix
   ];
 }

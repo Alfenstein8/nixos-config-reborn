@@ -6,10 +6,11 @@
 }: let
   # Create a customized version of logseq
   logseq-patch = pkgs.logseq.override {
-    electron_27 = pkgs.electron_34;
+    electron_27 = pkgs.electron_36;
   };
 in {
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [ "electron-33.4.11" ];
 
   home.packages = with pkgs;
     [
@@ -81,6 +82,9 @@ in {
       tree
       dua
       zoxide
+      tealdeer
+      wireguard-tools
+      tailscale
 
       # Coding stuff
       openjdk23

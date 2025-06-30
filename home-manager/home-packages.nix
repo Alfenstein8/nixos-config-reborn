@@ -2,14 +2,9 @@
   pkgs,
   inputs,
   ...
-}: let
-  # Create a customized version of logseq
-  logseq-patch = pkgs.logseq.override {
-    electron_27 = pkgs.electron_36;
-  };
-in {
+}:
+{
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [ "electron-33.4.11" ];
 
   home.packages = with pkgs;
     [
@@ -27,9 +22,9 @@ in {
       element-desktop
       beeper
       thunderbird
-      logseq-patch
+      logseq
       inputs.zen-browser.packages.${pkgs.system}.beta
-      filelight
+      kdePackages.filelight
       mullvad-vpn
       stremio
       tidal-hifi
@@ -109,13 +104,12 @@ in {
       libsForQt5.xwaylandvideobridge
       libnotify
       xdg-desktop-portal-gtk
-      xdg-desktop-portal-hyprland
+      # xdg-desktop-portal-hyprland
 
       # Other
       bemoji
       nix-prefetch-scripts
       iwd
       networkmanagerapplet
-
     ];
 }
